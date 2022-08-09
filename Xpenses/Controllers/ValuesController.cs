@@ -7,5 +7,16 @@ namespace Xpenses.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IConfiguration _config;
+
+        public ValuesController(IConfiguration configuration)
+        {
+            _config = configuration;
+        }
+
+        public async Task<string> GetAppSettings()
+        {
+            return _config["EnvironmentName"];
+        }
     }
 }
