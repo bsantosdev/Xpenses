@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Xpenses.Application\Xpenses.Application.csproj" />
     <ProjectReference Include="..\Xpenses.Contracts\Xpenses.Contracts.csproj" />
     <ProjectReference Include="..\Xpenses.Infrastructure\Xpenses.Infrastructure.csproj" />

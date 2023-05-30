@@ -1,0 +1,8 @@
+<div class="dashboard__wrapper">
+    <ng-container *ngIf="vm$ | async as vm">
+        <h2>Values</h2>
+        <h3>{{ vm.streamOne }}</h3>
+        <h3>{{ vm.streamTwo }}</h3>
+        <h3>{{ vm.streamThree }}</h3>
+    </ng-container>
+</div>

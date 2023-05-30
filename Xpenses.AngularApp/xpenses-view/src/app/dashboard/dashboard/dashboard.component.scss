@@ -1,0 +1,22 @@
+.dashboard {
+    &__wrapper {
+        // write me a wrapper with a very thin border
+        border: 1px solid black;
+        background-color: antiquewhite;
+        margin: 20px;
+        padding: 20px;
+        
+        @media (max-width: 768px) {
+            margin: 0;
+            padding: 0;
+        }
+
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        
+    }
+}

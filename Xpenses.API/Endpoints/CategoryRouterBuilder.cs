@@ -14,7 +14,8 @@ public static class CategoryRouterBuilder
 
     internal static IResult GetAllCategories(ICategoryRepository repo)
     {
-        return Results.Ok(repo.GetAllAsync());
+        var res = Results.Ok(repo.GetAllAsync().ConfigureAwait(false));
+        return res;
     }
 
     internal static async Task<IResult> GetCategoryById(ICategoryRepository repo, Guid id)

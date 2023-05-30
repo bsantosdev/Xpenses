@@ -64,6 +64,12 @@ var app = builder.Build();
     {
         app.UseSwagger();
         app.UseSwaggerUI();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<XpensesDbContext>();
+            dbContext.Database.Migrate();
+        }
     }
 
     app.UseExceptionHandler("/error");
